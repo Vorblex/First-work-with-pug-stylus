@@ -1,0 +1,26 @@
+header.header
+		.container
+			.header__left
+				.user
+					.user__avatar
+						img(src='static/img/content/user.jpg').user__pic
+					.user__username
+						|Александр Воробей
+
+			.header__right
+				.contacts
+					a.contacts__link.contacts__link_mob(href='#')
+						i(class="fa fa-phone" aria-hidden="true")
+					a.contacts__link(href='#')
+						|Мои контакты
+					ul.contacts__dropdown
+						li.triangle
+						li.contacts__dropdown-item
+							i(class="fa fa-envelope" aria-hidden="true")
+							|  vorblex@gmail.com
+						li.contacts__dropdown-item
+							i(class="fa fa-phone" aria-hidden="true")
+							|  +380 93 064 75 01
+						li.contacts__dropdown-item
+							i(class="fa fa-skype" aria-hidden="true")
+							|  vorblex

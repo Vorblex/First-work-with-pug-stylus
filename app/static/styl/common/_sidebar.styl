@@ -1,0 +1,60 @@
+.sidebar
+	float left
+	min-width 23.4%
+	padding-top 4px
+
+	+tablet()
+		float none
+		width 100%
+		margin-bottom 35px
+		text-align left
+
+		+phone()
+			text-align center
+
+
+.nav__list
+	text-align right
+	+tablet()
+		display inline-block
+
+	+tablet()
+		.nav__item
+			&:last-child
+				.nav__link
+					padding-right 0
+.nav__item
+	+tablet()
+		display inline-block
+
+.nav__link
+	fira()
+	font-size 18px
+	text-align right
+	color $black
+	display block
+	padding rem(10px) rem(24px) rem(10px) 0
+	border-right 6px solid transparent
+	transition 0.3s
+
+	i
+		+phone()
+			display none
+
+	&:hover
+		// border-color $blue
+		color $blue
+
+	+tablet()
+		border none
+		padding 10px 24px 10px 0
+
+
+	+phone()
+		padding rem(5px) rem(8px) rem(5px) 0
+		font-size 14px
+
+.nav__link_active
+	border-color $blue
+	fira(bold)
+	color $blue

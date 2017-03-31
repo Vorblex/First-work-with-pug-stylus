@@ -1,0 +1,140 @@
+.career
+	@extends .clearfix
+
+.career__left
+	width 34.2857%
+	float left
+	text-align left
+
+	+phone()
+		width 100%
+		float none
+		text-align center
+
+.career__pic
+	max-width 220px
+	max-height 220px
+	overflow hidden
+	border-radius 10px
+	display inline-block
+
+
+.career__img
+	max-width 100%
+	max-height 100%
+	display block
+
+.career__right
+	width 65.714%
+	float left
+	text-align right
+	padding-top 75px
+
+	+phone()
+		width 100%
+		float none
+		text-align left
+
+.career__list
+	.career__item
+		&:first-child
+			.career__block
+				&:before
+					display none
+
+		&:last-child
+			.career__block
+				&:after
+					display none
+
+.career__item
+	margin-bottom 20px
+
+.career__block
+	background $clear-white
+	display block
+	border-radius 10px
+	padding 15px 0 15px 20px
+	text-align left
+	fira(light)
+	color $gray
+	font-size 18px
+	position relative
+	margin-left 100px
+	transition .3s
+
+	&:hover
+		color $clear-white
+		background $blue
+
+		.career__year
+			color $blue
+			fira(bold)
+			font-size 18px
+			transition .3s
+
+			&:after
+				box-shadow 0 0 0 5px #94e0f2
+
+
+
+	&:after
+		content ""
+		display block
+		position absolute
+		width 1px
+		background #ddd
+		right 100%
+		bottom -20px
+		top 50%
+		margin-right 18px
+		margin-top 10px
+
+	&:before
+		content ""
+		display block
+		position absolute
+		width 1px
+		background #ddd
+		right 100%
+		bottom 50%
+		top 0
+		margin-right 18px
+		margin-bottom 10px
+
+	+phone()
+		width 100%
+		float none
+		text-align left
+		margin 0
+
+.career__title
+	fira()
+	font-size 20px
+
+.career__year
+	position absolute
+	right 100%
+	margin-right 33px
+	margin-top -15px
+	top 50%
+	line-height 30px
+	fira(light)
+	font-size 14px
+
+	&:after
+		content ""
+		display block
+		width 10px
+		height 10px
+		background $blue
+		border-radius 50%
+		position absolute
+		left 100%
+		margin-left 10px
+		top 50%
+		margin-top -5px
+
+
+
+

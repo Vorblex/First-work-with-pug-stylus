@@ -1,0 +1,54 @@
+// Clearfix
+.clearfix
+	zoom 1
+	&:after
+	&:before
+		content ""
+		display table
+	&:after
+		clear both
+
+
+// Inlineblock
+inlineblock($valign = top)
+	display inline-block
+	vertical-align $valign
+
+
+// Responsive
+rem($px)
+	return $px / 16px + 0 rem
+
+
+// Media
+hd()
+	@media screen and (max-width:1200px)
+		{block}
+
+laptop()
+	@media screen and (max-width:992px)
+		{block}
+
+tablet()
+	@media screen and (max-width:768px)
+		{block}
+
+phone()
+	@media screen and (max-width:480px)
+		{block}
+
+
+// Fonts
+fira($style = regular)
+	if $style == regular
+		font-family 'fira_sansregular'
+
+	else if	$style == bold
+		font-family 'fira_sansbold'
+
+	else if	$style == light
+		font-family 'fira_sanslight'
+
+	else if	$style == medium
+		font-family 'fira_sansmedium'
+

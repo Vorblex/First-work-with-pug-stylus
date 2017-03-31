@@ -1,0 +1,46 @@
+doctype html
+html(lang="ru-RU")
+	head
+		meta(charset="utf-8")
+		meta(http-equiv='X-UA-Compatible', content="IE = edge")
+		meta(name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no")
+		meta(name="keywords" content="")
+		meta(name="author" content="Vorblex")
+
+		// build:css static/css/vendor.min.css
+		// bower:css
+		// endbower
+		// endbuild
+
+		// build:css static/css/main.min.css
+		link(rel="stylesheet" type='text/css' href="static/css/main.css")
+		// endbuild
+
+		title
+			block title
+	body
+		<!--[if lt IE 8]>
+		p.browsehappy
+			| You are using an <strong>outdated</strong> browser.
+			| Please <a href="http://browsehappy.com/">upgrade your browser</a>
+			| to improve your experience.
+		<![endif]-->
+		.wrapper
+			.maincontent
+				include ../common/header
+				.content
+					.container
+						block content
+		include ../common/footer
+
+		//- // build:js static/js/vendor.min.js
+		//- // bower:js
+		//- // endbower
+		//- // endbuild
+
+		//- // build:js static/js/main.min.js
+		//- script(src="static/js/main.js")
+		//- // endbuild
+
+
+

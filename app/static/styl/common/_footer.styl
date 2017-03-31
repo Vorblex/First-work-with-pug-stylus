@@ -1,0 +1,48 @@
+.footer
+	background $black
+
+.footer__left, .footer__right
+	float left
+	width 50%
+
+	+phone()
+		float none
+		width 100%
+
+.footer__left
+	padding-top 18px
+
+	+phone()
+		text-align center
+
+.copyright__text
+	fira(light)
+	font-size: 14px;
+	color #9c9c9c
+
+.footer__right
+	text-align right
+	padding-top 10px
+
+.socials__list
+	+phone()
+		text-align center
+
+.socials__item
+	display inline-block
+	margin-left 3px
+
+.socials__link
+	width 32px
+	height 32px
+	background #fff
+	display block
+
+
+for social in fb vk tw
+		.socials__link_{social}
+			background url('../img/sprite/'social'.png') 0 0 no-repeat
+			transition all 0.3s
+
+			&:hover
+				background url('../img/sprite/'social'-hover.png') 0 0 no-repeat

@@ -1,0 +1,125 @@
+.main
+	float right
+	width 74.1%
+
+	+tablet()
+		float none
+		width 100%
+
+.about
+	@extends .clearfix
+
+.about__left
+	padding-top 12px
+	float left
+	width 42.857%
+	text-align center
+
+	+tablet()
+		width 31.3186%
+		margin-right 20px
+
+	+phone()
+		float none
+		width 100%
+
+.about__pic
+	max-width 220px
+	max-height 220px
+	overflow hidden
+	display inline-block
+	border 5px solid $clear-white
+	border-radius 50%
+
+	+tablet()
+		max-width 180px
+		max-height 180px
+
+	+tablet()
+		max-width 150px
+		max-height 150px
+
+
+.about__img
+	display block
+	max-width 100%
+	max-height 100%
+
+.about__right
+	float right
+	width 54.2857%
+
+	+tablet()
+		width 60.0027%
+		float left
+		padding-right 20px
+
+	+phone()
+		float none
+		width 100%
+
+.title
+	fira(medium)
+	font-size 35px
+	color $black
+	margin-bottom 25px
+
+	+phone()
+		text-align center
+
+.description
+	overflow-y auto
+	height 295px
+	margin-bottom 45px
+	p
+		fira(light)
+		font-size 18px
+		color $textp
+		margin-bottom 50px
+
+	+phone()
+		overflow hidden
+		height auto
+		p
+			font-size 16px
+
+
+.button-section
+	text-align right
+
+	+phone()
+		text-align center
+
+.button
+	display inline-block
+	border-radius 100px
+
+.button_about
+	border 2px solid $red
+	transition .3s
+	.button__link
+		color $red
+
+	&:hover
+		background $red
+		.button__link
+			color $white
+
+.button__link
+	fira(bold)
+	font-size 14px
+	padding 8px 10px
+	display block
+
+
+::-webkit-scrollbar-thumb {
+-webkit-border-radius: 8px;
+border-radius: 8px;
+background-color:#d8d8d8;
+}
+
+::-webkit-scrollbar{
+width: 5px;
+}
+
+

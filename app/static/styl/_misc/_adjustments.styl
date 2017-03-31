@@ -1,0 +1,111 @@
+//adjustment styles
+
+$footer-height = 50px
+$footer-height_phone = 100px
+
+body, html
+	width: 100%
+	height: 100%;
+html
+	font-size 16px
+
+	+hd()
+		font-size 16px
+
+	+laptop()
+		font-size 15px
+
+	+tablet()
+		font-size 14px
+
+	+phone()
+		font-size 12px
+
+body
+	line-height 1.42
+	-webkit-font-smoothing antialiased
+	background $white
+
+.wrapper
+	min-height 100%
+	position relative
+	overflow hidden
+
+	&:after
+		content ""
+		display block
+		height $footer-height
+
+		+phone()
+			height $footer-height_phone
+
+.maincontent
+	margin-bottom 50px
+
+.container
+	padding 0 20px
+	max-width 980px
+	margin 0 auto
+	@extends .clearfix
+
+	+phone()
+		min-width 300px
+		padding 0 10px
+
+
+.footer
+	height $footer-height
+	width 100%
+	margin-top: -($footer-height)
+	position relative
+
+	+phone()
+		margin-top: -($footer-height_phone)
+		height $footer-height_phone
+
+
+h1,h2,h3,h4,h5,h6
+	margin 0
+	font-weight normal
+
+ul,li
+	margin 0
+	padding 0
+	list-style-type none
+
+p
+	margin 0
+
+a
+	text-decoration none
+	color black
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video
+	vertical-align middle
+
+textarea
+	resize none
+
+*, *:before, *:after
+	box-sizing border-box
+
+.hide
+	display none
+.show
+	display block
+
+::-moz-selection
+	background #b3d4fc
+	text-shadow none
+
+::selection
+	background #b3d4fc
+	text-shadow none
+
+
+

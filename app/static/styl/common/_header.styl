@@ -1,0 +1,152 @@
+.header
+	background $clear-white
+	@extends .clearfix
+	margin-bottom 21px
+	height 80px
+	box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2);
+
+
+
+.header__left
+	float left
+	width 65%
+
+.header__right
+	float left
+	width 35%
+
+.header__left
+	padding 10px 0
+
+.user__avatar
+	width 64px
+	height 64px
+	border 2px solid #bebebe
+	border-radius 50%
+	overflow hidden
+	inlineblock(middle)
+	margin-right rem(20px)
+
+	+phone()
+		margin-right 7px
+
+.user__pic
+	max-width 100%
+	max-height 100%
+	display block
+
+.user__username
+	inlineblock(middle)
+	fira()
+	font-size rem(18px)
+	color $black
+
+	+phone()
+		width 95px
+
+.header__right
+	text-align right
+	padding-top 32px
+
+	+phone()
+		padding-top 17px
+
+
+.contacts
+	display inline-block
+	position relative
+	margin-right 20px
+
+	+phone()
+		margin-right 58px
+
+
+	&:hover
+		.contacts__link
+			color $red
+			background url('../img/sprite/textdec_hov.png') 0 bottom repeat-x
+
+			+phone()
+				background none
+
+		.contacts__dropdown
+			left 50%
+			margin-left -110px
+			opacity 1
+
+			+tablet()
+				margin-left -102px
+
+			+phone()
+				margin-left -92px
+
+
+
+.contacts__link
+	fira(bold)
+	font-size rem(18px)
+	color $blue
+	transition 0.3s
+	background url('../img/sprite/textdec.png') 0 bottom repeat-x
+
+	+phone()
+		background none
+		display none
+
+.contacts__link_mob
+	display none
+	+phone()
+		font-size 40px
+		display inline-block
+
+.contacts__dropdown
+	position absolute
+	background $clear-white
+	border 1px solid #dedede
+	border-radius 10px
+	margin-top 15px
+	left -99999px
+	z-index 1000
+	opacity 0
+	transition opacity 0.3s
+
+	&:before
+		content ""
+		display block
+		position absolute
+		left 0
+		right 0
+		top -25px
+		height 25px
+
+.contacts__dropdown-item
+	text-align left
+	fira(light)
+	font-size rem(18px)
+	margin rem(15px) 15px
+	position relative
+	white-space nowrap
+	.fa
+		color $blue
+
+.triangle
+	border 10px solid transparent
+	border-left-width 7px
+	border-right-width 7px
+	border-bottom-color #dedede
+	position absolute
+	left 50%
+	bottom 100%
+	margin-left -5px
+
+	&:after
+		content ""
+		display block
+		border 10px solid transparent
+		border-left-width 7px
+		border-right-width 7px
+		border-bottom-color $clear-white
+		position absolute
+		margin-left -7px
+		top -9px
+
